@@ -18,3 +18,20 @@ nav a {
 nav a:hover {
   text-decoration: underline; /* 悬停效果 */
 }
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
