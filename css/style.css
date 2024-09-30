@@ -2,13 +2,13 @@ body {
   max-width: 1200px; /* 调整此数值来控制页面宽度 */
   margin: 0 auto;    /* 自动分配左右两侧的空白区域 */
   padding: 0 3cm;    /* 设置左右两侧的内边距（空白区域），3cm 可根据需要调整 */
-  background-color: #ede8cc; /* 淡黃色 */
-  color: #232323 ; /* 黑色 */
+  background-color: #969589; /* 灰黃色 */
+  color: #0a0a0a ; /* 黑色 */
   font-family: 'Helvetica', sans-serif;
 }
 
 nav {
-  background-color: #858282; /* add style.css灰色导航栏 */
+  background-color: #757373; /* add style.css灰色导航栏 */
   padding: 10px;
 }
 
@@ -30,11 +30,13 @@ header {
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #333; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    padding: 10px; /* 内边距 */
+    text-align: center; /* 文字居中 */
+    position: fixed; /* 固定在页面底部 */
+    bottom: 0; /* 紧贴底部 */
+    width: 100%; /* 占满页面宽度 */
+    left: 0; /* 从页面最左侧开始 */
+    box-sizing: border-box; /* 包括内边距在内的宽度计算 */
 }
