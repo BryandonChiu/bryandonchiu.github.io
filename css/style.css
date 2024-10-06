@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
   max-width: 1200px; /* 调整此数值来控制页面宽度 */
   margin: 0 auto;    /* 自动分配左右两侧的空白区域 */
@@ -5,12 +12,15 @@ body {
   background-color: #969589; /* 灰黃色 */
   color: #0a0a0a ; /* 黑色 */
   font-family: 'Helvetica', sans-serif;
+  padding: 0; /* 重置页面内边距 */
+  margin: 0; /* 重置页面外边距 */
 }
 
 
 nav {
   background-color: #757373; /* add style.css灰色导航栏 */
   padding: 10px;
+  margin: 0; /* 移除外边距 */
 }
 
 nav a {
@@ -28,6 +38,7 @@ header {
     background-color: #333;
     color: white;
     padding: 10px;
+    margin: 0; /* 移除外边距 */
     text-align: center;
 }
 
