@@ -1,7 +1,7 @@
 body {
   max-width: 1200px; /* 调整此数值来控制页面宽度 */
   margin: 0 auto;    /* 自动分配左右两侧的空白区域 */
-  padding: 0 3cm;    /* 设置左右两侧的内边距（空白区域），3cm 可根据需要调整 */
+  padding: 0 5% ;    /* 设置左右两侧的内边距（空白区域），3cm 可根据需要调整 */
   background-color: #969589; /* 灰黃色 */
   color: #0a0a0a ; /* 黑色 */
   font-family: 'Helvetica', sans-serif;
