@@ -45,6 +45,30 @@ footer {
     box-sizing: border-box; /* 包括内边距在内的宽度计算 */
 }
 
+
+
+/* 未访问过的链接颜色 */
+a {
+  color: #d3b0d9; /* 白紫色 */
+}
+
+/* 悬停时的链接颜色 */
+a:hover {
+  color: #96aee3; /* 淺藍色 */
+}
+
+/* 已访问过的链接颜色 */
+a:visited {
+  color: #a09aa1; /* 灰色 */
+}
+
+/* 点击时的链接颜色 */
+a:active {
+  color: #905999; /* 紫色 */
+}
+
+
+
 /* Flexbox布局的容器 */
 .container {
     display: flex;
