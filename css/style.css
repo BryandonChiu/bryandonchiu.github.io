@@ -11,7 +11,7 @@ body {
 
 
 nav {
-  background-color: #4c4054; /* add style.css灰色导航栏 */
+  background-color: #666464; /* add style.css灰色导航栏 */
   padding: 10px;
 }
 
@@ -60,22 +60,22 @@ footer p a:hover {
 
 /* 未访问过的链接颜色 */
 a {
-  color: #d3b0d9; /* 白紫色 */
+  color: #ffffff; /* 白色 */
 }
 
 /* 悬停时的链接颜色 */
 a:hover {
-  color: #96aee3; /* 淺藍色 */
+  color: #7295e0; /* 淺藍色 */
 }
 
 /* 已访问过的链接颜色 */
 a:visited {
-  color: #a09aa1; /* 灰色 */
+  color: #ffffff; /* 白色 */
 }
 
 /* 点击时的链接颜色 */
 a:active {
-  color: #905999; /* 紫色 */
+  color: #4773d6; /* 藍色 */
 }
 
 
