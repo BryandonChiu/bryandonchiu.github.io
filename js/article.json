@@ -1,0 +1,6 @@
+[
+    { "id": "1", "title": "Introduction to Writing", "date": "2024-01-01", "link": "articles/intro.html" },
+    { "id": "1.1", "title": "Writing Styles", "date": "2024-01-05", "link": "articles/styles.html" },
+    { "id": "1.12", "title": "Realism in Literature", "date": "2024-01-10", "link": "articles/realism.html" },
+    { "id": "2", "title": "Philosophy in Writing", "date": "2024-02-01", "link": "articles/philosophy.html" }
+]

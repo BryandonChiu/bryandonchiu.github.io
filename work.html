@@ -31,13 +31,49 @@
     <h2>報導回顧</h2>
     <p>我在慈濟月刊擔任記者，有些報導寫過之後，回頭再看，會與當初有很多不同的想法。這裡是一些可以透露的部分。</p>
 
+    <!-- 原有的项目 -->
     <p>Project 1</p>
     <p>Project 2</p>
     <p>Project 3</p>
 
+    <!-- 新增的文章列表区域 -->
+    <h2>文章列表</h2>
+    <ul id="articleList" class="article-list"></ul>
+
     <footer>
         <p>© 2024 My Website</p>
     </footer>
+
+    <script>
+        // 定义文章数据
+        const articles = [
+            { id: '1', title: 'Introduction to Writing', date: '2024-01-01', link: 'articles/intro.html' },
+            { id: '1.1', title: 'Writing Styles', date: '2024-01-05', link: 'articles/styles.html' },
+            { id: '1.12', title: 'Realism in Literature', date: '2024-01-10', link: 'articles/realism.html' },
+            { id: '2', title: 'Philosophy in Writing', date: '2024-02-01', link: 'articles/philosophy.html' }
+        ];
+
+        // 自定义排序函数
+        function customSort(a, b) {
+            const aParts = a.id.split('.').map(Number);
+            const bParts = b.id.split('.').map(Number);
+            for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
+                const aNum = aParts[i] || 0;
+                const bNum = bParts[i] || 0;
+                if (aNum !== bNum) return aNum - bNum;
+            }
+            return 0;
+        }
+
+        // 按自定义排序显示文章
+        const sortedArticles = articles.sort(customSort);
+        const articleList = document.getElementById('articleList');
+        sortedArticles.forEach(article => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${article.link}" class="article-link">${article.id} - ${article.title}</a> (${article.date})`;
+            articleList.appendChild(listItem);
+        });
+    </script>
 
 </body>
 </html>
