@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+        .article-list li {
+            margin: 10px 0;
+        }
+        .article-link {
+            color: #333;
+            text-decoration: none;
+        }
+        .article-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Articles</h1>
+    <ul id="articleList" class="article-list"></ul>
+
+    <script>
+        // 定义文章数据
+        const articles = [
+            { id: '1', title: 'Introduction to Writing', date: '2024-01-01', link: 'articles/intro.html' },
+            { id: '1.1', title: 'Writing Styles', date: '2024-01-05', link: 'articles/styles.html' },
+            { id: '1.12', title: 'Realism in Literature', date: '2024-01-10', link: 'articles/realism.html' },
+            { id: '2', title: 'Philosophy in Writing', date: '2024-02-01', link: 'articles/philosophy.html' }
+        ];
+
+        // 自定义排序函数
+        function customSort(a, b) {
+            const aParts = a.id.split('.').map(Number);
+            const bParts = b.id.split('.').map(Number);
+            for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
+                const aNum = aParts[i] || 0;
+                const bNum = bParts[i] || 0;
+                if (aNum !== bNum) return aNum - bNum;
+            }
+            return 0;
+        }
+
+        // 按自定义排序显示文章
+        const sortedArticles = articles.sort(customSort);
+        const articleList = document.getElementById('articleList');
+        sortedArticles.forEach(article => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${article.link}" class="article-link">${article.id} - ${article.title}</a> (${article.date})`;
+            articleList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
