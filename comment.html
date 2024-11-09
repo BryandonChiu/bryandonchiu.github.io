@@ -30,12 +30,40 @@
              <a href="about.html">關於我</a> |
          </nav>
 
-         <h2>若您有任何想討論或提問的事情</h2>
-         <p>您可以透過 bryan.d.chiu@gmail.com 聯絡我。</p>
+         <h2>文章列表</h2>
+         <ul id="articleList" class="article-list"></ul>
 
-    <footer>
-        <p>© 2024 My Website</p>
-    </footer>
+<footer>
+       <p>© 2024 <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a></p>
+</footer>
 
+    <script>
+    // 从 JSON 文件获取数据并动态生成文章列表
+    fetch('js/comment.json')
+        .then(response => response.json())
+        .then(articles => {
+            // 按编号自定义排序
+            articles.sort(customSort);
+            const articleList = document.getElementById('articleList');
+            articles.forEach(article => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<a href="${article.link}" class="article-link">${article.id} - ${article.title}</a> (${article.date})`;
+                articleList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error loading articles:', error));
+
+    // 自定义排序函数
+    function customSort(a, b) {
+        const aParts = a.id.split('.').map(Number);
+        const bParts = b.id.split('.').map(Number);
+        for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
+            const aNum = aParts[i] || 0;
+            const bNum = bParts[i] || 0;
+            if (aNum !== bNum) return aNum - bNum;
+        }
+        return 0;
+    }
+    </script>
 </body>
 </html>
