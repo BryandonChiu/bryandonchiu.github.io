@@ -11,7 +11,7 @@ body {
 
 
 nav {
-  background-color: #666464; /* add style.css灰色导航栏 */
+  background-color: #666464; /* 灰色导航栏 */
   padding: 10px;
 }
 
@@ -21,14 +21,18 @@ nav a {
   margin-right: 15px;
 }
 
-nav a:hover {
-  text-decoration: underline; /* 悬停效果 */
+nav a:hover {          /* 悬停效果 */
+  color: #ffffff; /* 白色链接 */
+  text-decoration: underline; 
 }
 
-nav a:visited {
-  color: #ffffff; /* 白色链接 *//* 已访问过的链接颜色 */
+nav a:visited {       /* 已访问过的链接颜色 */
+  color: #ffffff; /* 白色链接 */
 }
 
+nav a:active {         /* 点击时的链接颜色 */
+  color: #ffffff; /* 白色链接 */
+}
 
 
 
@@ -58,12 +62,16 @@ footer p a {
     text-decoration: none; /* 移除下划线 */
 }
 
-footer p a:hover {
-    text-decoration: underline; /* 悬停时显示下划线 */
+footer p a:hover {           /* 悬停时显示下划线 */
+    text-decoration: underline; 
 }
 
-footer p a:visited {
-  color: #ffffff; /* 白色链接 *//* 已访问过的链接颜色 */
+footer p a:visited {        /* 已访问过的链接颜色 */
+  color: #ffffff;           /* 白色链接 */
+}
+
+footer p a:active {          /* 点击时的链接颜色 */
+  color: #ffffff;           /* 白色链接 */
 }
 
 
