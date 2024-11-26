@@ -16,7 +16,7 @@ nav {
 }
 
 nav a {
-  color: #02446e; /* 白色链接 */
+  color: #ffffff; /* 白色链接 */
   text-decoration: none;
   margin-right: 15px;
 }
@@ -60,22 +60,22 @@ footer p a:hover {
 
 /* 未访问过的链接颜色 */
 a {
-  color: #ffffff; /* 白色 */
+  color: #065c52; /* 綠色 */
 }
 
 /* 悬停时的链接颜色 */
 a:hover {
-  color: #7295e0; /* 淺藍色 */
+  color: #062b5c; /* 深藍 */
 }
 
 /* 已访问过的链接颜色 */
 a:visited {
-  color: #ffffff; /* 白色 */
+  color: #26065c; /* 紫藍 */
 }
 
 /* 点击时的链接颜色 */
 a:active {
-  color: #4773d6; /* 藍色 */
+  color: #02353d; /* 深綠 */
 }
 
 
