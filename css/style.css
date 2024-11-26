@@ -25,6 +25,12 @@ nav a:hover {
   text-decoration: underline; /* 悬停效果 */
 }
 
+nav a:visited {
+  color: #ffffff; /* 白色链接 *//* 已访问过的链接颜色 */
+}
+
+
+
 
 header {
     background-color: #333;
@@ -48,12 +54,16 @@ footer {
 
 footer p a {
     display: inline; /* 保持行内显示 */
-    color: #ffffff; /* 链接颜色 */
+    color: #ffffff; /* 白色链接 */
     text-decoration: none; /* 移除下划线 */
 }
 
 footer p a:hover {
     text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+footer p a:visited {
+  color: #ffffff; /* 白色链接 *//* 已访问过的链接颜色 */
 }
 
 
