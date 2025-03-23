@@ -41,7 +41,7 @@
     <ul id="articleList" class="article-list"></ul>
 
     <footer>
-         <p>© <span id="year"></span> My Website</p>
+         <p>© <span id="year"></span> <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a> </p>
     </footer>
 
     <script>
@@ -73,10 +73,8 @@
 
     // **自動更新 footer 年份**
     document.addEventListener("DOMContentLoaded", function () {
-        const currentYear = new Date().getFullYear();
-        document.querySelector("footer p").innerHTML = `© ${currentYear} <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a>`;
+        document.getElementById("year").textContent = new Date().getFullYear();
     });
-    }
     </script>
 </body>
 </html>
