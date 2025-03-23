@@ -33,13 +33,13 @@
          <h2>反思報導</h2>
          <ul id="articleList" class="article-list"></ul>
 
-<footer>
-       <p>© 2024 <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a></p>
-</footer>
+    <footer>
+         <p>© <span id="year"></span> <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a> </p>
+    </footer>
 
     <script>
     // 从 JSON 文件获取数据并动态生成文章列表
-    fetch('js/comment.json')
+    fetch('js/article.json')
         .then(response => response.json())
         .then(articles => {
             // 按编号自定义排序
@@ -63,7 +63,13 @@
             if (aNum !== bNum) return aNum - bNum;
         }
         return 0;
-    }
+     } 
+
+    // **自動更新 footer 年份**
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("year").textContent = new Date().getFullYear();
+    });
     </script>
+
 </body>
 </html>

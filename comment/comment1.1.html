@@ -59,7 +59,16 @@
        </div>
                
 
+    <footer>
+         <p>© <span id="year"></span> <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a> </p>
+    </footer>
 
-<footer>
-               <p>© 2025 <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a></p>
-</footer>
+    <script>
+    // **自動更新 footer 年份**
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("year").textContent = new Date().getFullYear();
+    });
+    </script>
+
+</body>
+</html>
