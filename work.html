@@ -41,7 +41,7 @@
     <ul id="articleList" class="article-list"></ul>
 
     <footer>
-         <p>© 2025 <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a></p>
+         <p>© <span id="year"></span> My Website</p>
     </footer>
 
     <script>
@@ -70,6 +70,12 @@
             if (aNum !== bNum) return aNum - bNum;
         }
         return 0;
+
+    // **自動更新 footer 年份**
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentYear = new Date().getFullYear();
+        document.querySelector("footer p").innerHTML = `© ${currentYear} <a href="https://github.com/BryandonChiu/bryandonchiu.github.io">My Github</a>`;
+    });
     }
     </script>
 </body>
